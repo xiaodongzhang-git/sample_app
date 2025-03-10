@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# login API
+POST    /login    controllers.AuthController.login
+
+# tags API
+POST    /category           controllers.CategoryController.addCategory
+GET     /category           controllers.CategoryController.getCategories
+PUT     /category/:id       controllers.CategoryController.updateCategory(id: Int)
+
+# users API
+POST    /user           controllers.UserController.addUser
+GET     /user           controllers.UserController.getUsers
+PUT     /user/:id       controllers.UserController.updateUser(id: Int)
+
+# volunteer API
+POST    /volunteer           controllers.VolunteerController.addVolunteer
+GET     /volunteer           controllers.VolunteerController.getVolunteers
+PUT     /volunteer/:id       controllers.VolunteerController.updateVolunteer(id: Int)
+
+# backlog API
+POST    /backlog/token    controllers.BacklogAuthController.getAccessToken
+
+GET     /issueType           controllers.IssueTypeController.getIssueTypes
+POST    /issueType           controllers.IssueTypeController.addIssueType
+PUT     /issueType/:id       controllers.IssueTypeController.updateIssueType(id: Int)
+
+GET     /issue           controllers.IssueController.getIssues
+POST    /issue           controllers.IssueController.addIssue
+PUT     /issue/:id       controllers.IssueController.updateIssue(id: Int)
+
+
